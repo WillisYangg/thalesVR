@@ -17,7 +17,11 @@ public class ButtonVR : MonoBehaviour
     void Start()
     {
         sound = GetComponent<AudioSource>();
-        isPressed = false;    
+        isPressed = false;
+        if (tutorialPanel != null)
+        {
+            tutorialPanel.SetActive(false);
+        }    
     }
 
     private void OnTriggerEnter(Collider other)
